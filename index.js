@@ -10,6 +10,8 @@ const stories = require("./routes/stories")
 
 app.use("/api/stories", stories)
 
+app.use(express.static('public'))
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
